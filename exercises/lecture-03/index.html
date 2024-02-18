@@ -4,50 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lection 03</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/demo.css">
-    <link rel="stylesheet" href="./css/app.css">
+    <title>Lesson 3 challenges</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- Додайте тут елемент style в середині style, визначте селектор p з властивістю color: red;-->
     <style>
-        /*.foo {
-            color: hotpink;
-        }*/
-
-        #foo {
-            font-size: x-large;
+        p {
+            color: red;
+        }
+    </style>
+    <!-- Додайте тут елемент style: -->
+    <style type="text/css">
+        body {
+            background: var(--bgColor);
         }
 
-        h1 {
-            color: magenta;
-            font-size: xx-large;
+        div {
+            --bgColor: limegreen;
         }
+
+        p {
+            background: var(--bgColor);
+        }
+
+        /* визначте для елементів p властивість фону таким чином:background: var(--bgColor); */
     </style>
 </head>
 
 <body>
-    <h1>Lection 03</h1>
-    <p hidden>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium nostrum animi, nemo
-        perspiciatis
-        nisi eum quidem harum modi mollitia suscipit, accusamus labore officia vel saepe nesciunt doloribus sequi
-        libero.</p>
-    <foo id="foo" class="foo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A consectetur magnam nobis
-        expedita esse
-        quae,
-        explicabo laboriosam quam architecto omnis ipsam iure sint repudiandae? Voluptatum, rem. Autem natus veritatis
-        velit.</foo>
+    <a href="../../index.html">Home</a> | <a href="../index.html">Exercises</a>
 
-    <bar style="color: rgb(240, 102, 10);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam
-        dolorem
-        nulla soluta consequatur
-        asperiores eius blanditiis cupiditate tenetur incidunt dicta debitis eum fugit sed adipisci explicabo fugiat,
-        molestiae illum?</bar>
+    <h2>Сторінка Вікіпедії для мови CSS</h2>
+    <!-- На сайті Wikipedia знайдіть сторінку про CSS українською мовою -->
 
-    <span id="foo1" class="foo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum reiciendis,
-        consectetur eligendi
-        reprehenderit tempora fuga blanditiis facilis animi accusantium officia sunt provident necessitatibus tempore
-        libero error. Unde quaerat vel veritatis?</span>
+    <!-- Додайте тут елемент iframe з посиланням на українську версію Wikipedia page for the CSS language -->
+    <iframe title="Сторінка Вікіпедії для мови CSS" src="https://uk.wikipedia.org/wiki/CSS"></iframe>
 
-    <iframe src="https://en.m.wikipedia.org/wiki/HTML" title="Wikipedia pdge for the HMTL language"></iframe>
+    <!-- В елементі iframe визначте атрибут title зі значенням Сторінка Вікіпедії для мови CSS -->
+
+    <!-- Додайте тут елемент p з текстом This is my paragraph. Визначте атрибут style для тега p зі значенням color: blue; -->
+    <p style="color:blue;">This is my paragraph</p>
+    <!-- який колір буде мати текст This is my paragraph і чому.-->
+    <!-- Синій. Тому що, стилі у тегах мають вищу пріоритетність -->
+
+    <!-- завдання 3: виправити помилки-->
+
+    <p>Звичайний, нудний абзац. Намагайтеся не заснути.</p>
+    <p id="exciting">The most exciting paragraph on the page. One of a kind!</p>
+
+    <div id="exciting1">The most exciting paragraph on the page. One of a kind!</div>
+    <!-- ідентифікатор має бути унікальним -->
+    <style>
+        #exciting {
+            background: #f69d3c;
+            border: 1px solid #696969;
+            padding: 10px;
+        }
+
+        #exciting1 {
+            background: #583cf6;
+            border: 1px solid #8d5252;
+            padding: 10px;
+        }
+    </style>
+
+    <!-- Завдання 4 -->
+
+    <!-- Чи буде змінна --bgColor видимою для елемента body. Яким буде фон елемента body і чому. -->
+    <!-- Не буде видима, бо визначили окремо колір для тега div, а div не є предком body для того, щоб body міг встановити колір фону -->
+
+    <!-- Додайте тут 2 елементи div: -->
+    <div>
+        <h3>Div 1</h3>
+        <p>Paragraph 1</p>
+    </div>
+    <div>
+        <h3>Div 2</h3>
+        <p>Paragraph 2</p>
+    </div>
+
+    <!-- Завдання 6. Виправити помилку у фпагменті:
+
+        Помилка 1. Спочатку мають йти імпорти
+        Помилка 2. Назва файлу CSS, який імпортується тут не співпадає з тим, що ми створили -->
+    * {
+    margin: 0;
+    padding: 0;
+    }
+
+    /* more styles */
+    @import url("my-imported-styles.css"); -->
+
+    <!-- Завдання 9. Відредагувати розділ footer -->
+
+    <footer>
+        <!-- створити тут секцію -->
+        <section>
+            <!-- створити тут div -->
+            <div>
+                <h2>About</h2>
+                <!-- створити тут невпорядкований список з такими елементами -->
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <!-- створити тут div -->
+            <div>
+                <h2>Resources</h2>
+                <!-- створити тут невпорядкований список з такими елементами -->
+                <ul>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">eBooks</a></li>
+                    <li><a href="#">Webinars</a></li>
+                </ul>
+            </div>
+            <!-- створити тут div -->
+            <div>
+                <h2>Contact</h2>
+                <!-- створити тут невпорядкований список з такими елементами -->
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Sales</a></li>
+                    <li><a href="#">Advertise</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Footer legal -->
+        <!-- створити тут section -->
+        <section>
+            <!-- створити тут невпорядкований список з такими елементами -->
+            <ul>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p>&copy; 2024 Copyright Shopaholic Inc.</p>
+
+        </section>
+    </footer>
 
 </body>
 

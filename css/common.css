@@ -1,6 +1,10 @@
 /* common.css */
+:root {
+    --primary-text-color: #000;
+    --primary-bg-color: #fff;
+}
 
-html {
-    --main-color: #009;
-    --anchor-color: salmon;
+footer {
+    --footer-text-color: #fff;
+    --fuuter-bg-color: #000;
 }
